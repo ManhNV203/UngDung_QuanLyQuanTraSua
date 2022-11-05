@@ -26,7 +26,7 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="pnlMenu" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="pnlCacGiaoDien" pref="989" max="32767" attributes="0"/>
+              <Component id="pnlCacGiaoDien" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -151,6 +151,9 @@
               <Dimension value="[170, 50]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBanHangActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnHoaDon">
           <Properties>
@@ -165,6 +168,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHoaDonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnKhachHang">
           <Properties>
@@ -196,6 +202,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNhanVienActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnKhuyenMai">
           <Properties>
@@ -210,6 +219,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKhuyenMaiActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnKhoHang">
           <Properties>
@@ -224,6 +236,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKhoHangActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnThongKe">
           <Properties>
@@ -238,6 +253,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThongKeActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnDangXuat">
           <Properties>
@@ -377,7 +395,7 @@
         <Container class="javax.swing.JPanel" name="pnlNhanVien">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="cardNhanhVien"/>
+              <CardConstraints cardName="cardNhanVien"/>
             </Constraint>
           </Constraints>
 

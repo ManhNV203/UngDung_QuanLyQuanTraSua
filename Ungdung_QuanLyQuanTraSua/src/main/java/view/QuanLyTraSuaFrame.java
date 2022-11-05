@@ -4,6 +4,7 @@
  */
 package view;
 
+import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -88,11 +89,21 @@ public class QuanLyTraSuaFrame extends javax.swing.JFrame {
         btnBanHang.setText("Bán Hàng");
         btnBanHang.setBorder(null);
         btnBanHang.setPreferredSize(new java.awt.Dimension(170, 50));
+        btnBanHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBanHangActionPerformed(evt);
+            }
+        });
 
         btnHoaDon.setBackground(new java.awt.Color(204, 255, 255));
         btnHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnHoaDon.setText("Hóa Đơn");
         btnHoaDon.setBorder(null);
+        btnHoaDon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHoaDonActionPerformed(evt);
+            }
+        });
 
         btnKhachHang.setBackground(new java.awt.Color(204, 255, 255));
         btnKhachHang.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -108,21 +119,41 @@ public class QuanLyTraSuaFrame extends javax.swing.JFrame {
         btnNhanVien.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnNhanVien.setText("Nhân Viên");
         btnNhanVien.setBorder(null);
+        btnNhanVien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNhanVienActionPerformed(evt);
+            }
+        });
 
         btnKhuyenMai.setBackground(new java.awt.Color(204, 255, 255));
         btnKhuyenMai.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnKhuyenMai.setText("Khuyến Mại");
         btnKhuyenMai.setBorder(null);
+        btnKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKhuyenMaiActionPerformed(evt);
+            }
+        });
 
         btnKhoHang.setBackground(new java.awt.Color(204, 255, 255));
         btnKhoHang.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnKhoHang.setText("Kho Hàng");
         btnKhoHang.setBorder(null);
+        btnKhoHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKhoHangActionPerformed(evt);
+            }
+        });
 
         btnThongKe.setBackground(new java.awt.Color(204, 255, 255));
         btnThongKe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnThongKe.setText("Thống Kê");
         btnThongKe.setBorder(null);
+        btnThongKe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThongKeActionPerformed(evt);
+            }
+        });
 
         btnDangXuat.setBackground(new java.awt.Color(204, 255, 255));
         btnDangXuat.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -262,7 +293,7 @@ public class QuanLyTraSuaFrame extends javax.swing.JFrame {
                 .addContainerGap(625, Short.MAX_VALUE))
         );
 
-        pnlCacGiaoDien.add(pnlNhanVien, "cardNhanhVien");
+        pnlCacGiaoDien.add(pnlNhanVien, "cardNhanVien");
 
         jLabel5.setText("jLabel5");
 
@@ -334,7 +365,7 @@ public class QuanLyTraSuaFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlCacGiaoDien, javax.swing.GroupLayout.DEFAULT_SIZE, 989, Short.MAX_VALUE))
+                .addComponent(pnlCacGiaoDien, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -347,7 +378,45 @@ public class QuanLyTraSuaFrame extends javax.swing.JFrame {
 
     private void btnKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKhachHangActionPerformed
         // TODO add your handling code here:
+        CardLayout layout = (CardLayout) pnlCacGiaoDien.getLayout();
+        layout.show(pnlCacGiaoDien, "cardKhachHang");
     }//GEN-LAST:event_btnKhachHangActionPerformed
+
+    private void btnBanHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBanHangActionPerformed
+        // TODO add your handling code here:
+        CardLayout layout = (CardLayout) pnlCacGiaoDien.getLayout();
+        layout.show(pnlCacGiaoDien, "cardBanHang");
+    }//GEN-LAST:event_btnBanHangActionPerformed
+
+    private void btnHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHoaDonActionPerformed
+        // TODO add your handling code here:
+        CardLayout layout = (CardLayout) pnlCacGiaoDien.getLayout();
+        layout.show(pnlCacGiaoDien, "cardHoaDon");
+    }//GEN-LAST:event_btnHoaDonActionPerformed
+
+    private void btnNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNhanVienActionPerformed
+        // TODO add your handling code here:
+        CardLayout layout = (CardLayout) pnlCacGiaoDien.getLayout();
+        layout.show(pnlCacGiaoDien, "cardNhanVien");
+    }//GEN-LAST:event_btnNhanVienActionPerformed
+
+    private void btnKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKhuyenMaiActionPerformed
+        // TODO add your handling code here:
+        CardLayout layout = (CardLayout) pnlCacGiaoDien.getLayout();
+        layout.show(pnlCacGiaoDien, "cardKhuyenMai");
+    }//GEN-LAST:event_btnKhuyenMaiActionPerformed
+
+    private void btnKhoHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKhoHangActionPerformed
+        // TODO add your handling code here:
+        CardLayout layout = (CardLayout) pnlCacGiaoDien.getLayout();
+        layout.show(pnlCacGiaoDien, "cardKhoHang");
+    }//GEN-LAST:event_btnKhoHangActionPerformed
+
+    private void btnThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThongKeActionPerformed
+        // TODO add your handling code here:
+        CardLayout layout = (CardLayout) pnlCacGiaoDien.getLayout();
+        layout.show(pnlCacGiaoDien, "cardThongKe");
+    }//GEN-LAST:event_btnThongKeActionPerformed
 
     /**
      * @param args the command line arguments
